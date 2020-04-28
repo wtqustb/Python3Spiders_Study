@@ -5,7 +5,7 @@ url = "http://118.184.217.73:7182/ReportStudent/SLabStatisticPage/GetLabStatisti
 headers={
     "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.122 Safari/537.36",
     "Referer":"http://118.184.217.73:7182/ReportStudent/SLabStatisticPage/GetLabStatisticList",
-    "Cookie":"COOKIES_KEY_USERNAME=41824089; ASP.NET_SessionId=4ixhzeeiaphs1auxqf3yb4mt"
+    "Cookie":"COOKIES_KEY_USERNAME=41824089; ASP.NET_SessionId=1aoqcu240l1a2345r34tfa45"
               
 }
 

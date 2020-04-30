@@ -2,6 +2,7 @@ import requests
 import re
 import json
 import base64
+import sys
 
 
 base_url = "http://118.184.217.73:7182/"
@@ -41,13 +42,19 @@ def login(user,password):
     }
     
     response = s.post(url=posturl,headers=headers,data=postdata)
-    html = json.loads(response.text)
-    datalists = html["DataList"]
-    result = []
-    for datalist in datalists:
-        print(base_url+datalist["LabDateUrl"])
-        result.append(datalist["LabDateUrl"])
-    return result
+    try:
+        html = json.loads(response.text)
+        datalists = html["DataList"]
+        result = []
+        for datalist in datalists:
+            print(base_url+datalist["LabDateUrl"])
+            result.append(datalist["LabDateUrl"])
+        return result
+    except BaseException as e:
+        print("="*100)
+        print("请确认输入的账号密码是否正确.....")
+        sys.exit()
+
 
 
 def get_xml(url):
@@ -74,10 +81,6 @@ if __name__ == "__main__":
     xml_urls = []
     xml_urls = login(user,password)
     save_file(xml_urls)
-    
-
-    
-    
     
 
 
